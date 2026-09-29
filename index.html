@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rohan Singh Rajput – Marketing Executive, Content Creator, Storyteller. Specializing in influencer marketing, social media strategy, and EV brand campaigns." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Rohan Singh Rajput – Marketing Executive at Euler Motors. Brand marketing, product launches &amp; GTM, influencer marketing and brand storytelling for electric mobility." />
   <meta name="keywords" content="Rohan Singh Rajput, Marketing, Content Creator, Influencer Marketing, Euler Motors, Social Media, Storyteller" />
   <meta name="author" content="Rohan Singh Rajput" />
   <meta property="og:title" content="Rohan Singh Rajput | Creative Marketer & Storyteller" />
@@ -12,7 +12,7 @@
   <title>Rohan Singh Rajput | Creative Marketer & Storyteller</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
 <style>
 /* ═══════════════════════════════════════════
    ROHAN SINGH RAJPUT — PORTFOLIO CSS
@@ -369,11 +369,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .hero__name {
-  font-family: var(--font-display);
-  font-size: clamp(4rem, 12vw, 9rem);
+  font-family: 'Archivo', var(--font-display);
+  font-stretch: 125%;
+  font-variation-settings: 'wdth' 125;
+  font-size: clamp(3.4rem, 11vw, 8.5rem);
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+  line-height: 1;
+  letter-spacing: -0.01em;
   color: var(--white);
   margin-bottom: 24px;
 }
@@ -1180,7 +1182,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 @media (max-width: 480px) {
-  .hero__name { letter-spacing: -0.02em; }
+  .hero__name { letter-spacing: -0.01em; }
   .hero__ctas { flex-direction: column; align-items: center; }
   .hero__stats { flex-direction: column; gap: 16px; }
   .filter-bar { gap: 8px; }
@@ -1202,6 +1204,112 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--white);
 }
 
+/* ── VIRAL HITS (inverted band) ─────────────── */
+.viral {
+  --ink: #050a12;
+  --sun: #ffc83d;
+  background: var(--sun);
+  color: var(--ink);
+  padding: 110px 0 90px;
+  position: relative;
+  overflow: hidden;
+}
+.viral__head {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 360px);
+  gap: 32px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+.viral__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 9vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.viral__intro { font-size: 1.05rem; line-height: 1.6; color: rgba(5,10,18,0.78); max-width: 36ch; }
+.viral__total {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin-top: 12px;
+}
+.viral__list { border-top: 3px solid var(--ink); }
+.viral-row {
+  display: grid;
+  grid-template-columns: 48px 132px calc(clamp(2.8rem, 6vw, 5.75rem) * 4.3) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(5,10,18,0.25);
+  color: var(--ink);
+}
+.viral-row__rank { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; align-self: start; padding-top: 6px; }
+.viral-row__phone {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--ink);
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 rgba(5,10,18,0.9);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.viral-row__phone img { width: 100%; height: 100%; object-fit: cover; }
+.viral-row:hover .viral-row__phone,
+.viral-row:focus-visible .viral-row__phone { transform: translate(-3px,-3px); box-shadow: 11px 11px 0 rgba(5,10,18,0.9); }
+.viral-row:focus-visible { outline: 3px solid var(--ink); outline-offset: 6px; }
+.viral-row__views {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.8rem, 6vw, 5.75rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  padding-right: 8px;
+}
+.viral-row__views small { display: block; font-size: 0.95rem; font-weight: 600; letter-spacing: 0; margin-top: 10px; opacity: 0.75; }
+.viral-row__meta { min-width: 0; }
+.viral-row__meta h3 { overflow-wrap: anywhere; font-family: var(--font-display); font-size: 1.25rem; line-height: 1.25; font-weight: 700; margin-bottom: 8px; }
+.viral-row__meta p { font-size: 0.95rem; line-height: 1.55; color: rgba(5,10,18,0.78); }
+.viral-row__role { display: inline-block; margin-top: 12px; font-size: 0.85rem; font-weight: 500; padding: 4px 12px; border: 1.5px solid var(--ink); border-radius: 100px; }
+.viral-row__watch { display: inline-block; margin-top: 12px; margin-left: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ── RECOGNITION ───────────────────────────── */
+.recog__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+  padding: 48px;
+  border: 1px solid var(--border-glow);
+  border-radius: 24px;
+  background: linear-gradient(160deg, rgba(37,211,102,0.08), rgba(0,180,255,0.04));
+}
+.recog__card h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.1; color: var(--white); margin-bottom: 16px; }
+.recog__card p { color: var(--text-muted); max-width: 52ch; margin-bottom: 28px; }
+.recog__figures { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.recog__fig { padding: 24px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); }
+.recog__fig strong { display: block; font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); line-height: 1; color: #25d366; margin-bottom: 8px; }
+.recog__fig span { font-size: 0.9rem; color: var(--text-muted); }
+.recog__fig--wide { grid-column: 1 / -1; }
+
+@media (max-width: 900px) {
+  .viral__head { grid-template-columns: 1fr; }
+  .viral-row { grid-template-columns: 96px minmax(0, 1fr); gap: 20px; }
+  .viral-row__rank { display: none; }
+  .viral-row__meta { grid-column: 1 / -1; }
+  .recog__card { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .viral-row__phone { transition: none; }
+}
+
 </style>
 </head>
 <body>
@@ -1214,6 +1322,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <ul class="nav__links">
       <li><a href="#about">About</a></li>
       <li><a href="#featured">Work</a></li>
+      <li><a href="#viral">Viral</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact" class="nav__cta">Let's Talk</a></li>
@@ -1228,6 +1337,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <ul>
       <li><a href="#about" class="mob-link">About</a></li>
       <li><a href="#featured" class="mob-link">Work</a></li>
+      <li><a href="#viral" class="mob-link">Viral</a></li>
       <li><a href="#skills" class="mob-link">Skills</a></li>
       <li><a href="#experience" class="mob-link">Experience</a></li>
       <li><a href="#contact" class="mob-link">Contact</a></li>
@@ -1245,7 +1355,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="hero__grid"></div>
 
     <div class="hero__content">
-      <p class="hero__eyebrow reveal">Marketing Executive · Content Creator · Storyteller</p>
+      <p class="hero__eyebrow reveal"><span style="white-space:nowrap">Social Media &amp; Creator Marketing</span> | <span style="white-space:nowrap">Content Strategy</span> | <span style="white-space:nowrap">Influencer Marketing</span> | <span style="white-space:nowrap">Automotive &amp; EV Marketing</span></p>
       <h1 class="hero__name reveal">
         Rohan<br/>
         <span class="hero__name--grad">Singh Rajput</span>
@@ -1260,23 +1370,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
       </div>
       <div class="hero__stats reveal">
         <div class="stat">
-          <span class="stat__num" data-target="1">0</span><span class="stat__unit">.5 Yrs</span>
+          <span class="stat__num" data-target="2">0</span><span class="stat__unit">+ Yrs</span>
           <p>Marketing Experience</p>
         </div>
         <div class="stat__divider"></div>
         <div class="stat">
-          <span class="stat__num" data-target="25">0</span><span class="stat__unit">+</span>
-          <p>Videos Produced</p>
+          <span class="stat__num" data-target="70">0</span><span class="stat__unit">M+</span>
+          <p>Campaign Reach</p>
         </div>
         <div class="stat__divider"></div>
         <div class="stat">
-          <span class="stat__num" data-target="2">0</span><span class="stat__unit">+ Yrs</span>
-          <p>Theatre &amp; Drama</p>
+          <span class="stat__num" data-target="100">0</span><span class="stat__unit">+</span>
+          <p>Influencers Managed</p>
         </div>
         <div class="stat__divider"></div>
         <div class="stat">
-          <span class="stat__num" data-target="100">0</span><span class="stat__unit">K+</span>
-          <p>KMs Celebrated</p>
+          <span class="stat__num" data-target="76">0</span><span class="stat__unit">+</span>
+          <p>Product &amp; Customer Films</p>
         </div>
       </div>
     </div>
@@ -1303,15 +1413,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
           <p class="section__label">About Me</p>
           <h2 class="section__title">Where Strategy<br/>Meets <span class="grad-text">Storytelling</span></h2>
           <p class="about__bio">
-            I'm Rohan — a creative marketer who believes the best campaigns aren't just seen, they're <em>felt</em>. With 1.5 years in marketing and 2+ years rooted in theatre and drama, I bring a performer's instinct to every campaign I build.
+            I'm Rohan — a creative marketer who believes the best campaigns aren't just seen, they're <em>felt</em>. With 2+ years in marketing at Euler Motors and a long run in street theatre, I bring a performer's instinct to every campaign I build — from leading the NEO, Turbo EV 1000 and Storm launches to handling ₹50 lakh–2 Cr marketing budgets.
           </p>
           <p class="about__bio">
-            From scripting and hosting brand films to building influencer ecosystems across Hindi, Marathi, and Tamil markets — I've been on the ground, behind the lens, and in front of the mic. Theatre trained me to read a room; marketing trained me to move one.
+            From scripting and hosting brand films to running 100+ influencers across PAN-India campaigns and a Click-to-WhatsApp funnel that Meta featured as a case study — I've been on the ground, behind the lens, and in front of the mic. Theatre trained me to read a room; marketing trained me to move one.
           </p>
           <div class="about__tags">
             <span>Content Creator</span>
             <span>Influencer Strategy</span>
             <span>EV Marketing</span>
+            <span>Product Launches &amp; GTM</span>
             <span>Voice-over Artist</span>
             <span>Brand Storytelling</span>
           </div>
@@ -1333,7 +1444,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <!-- Featured 1 -->
         <a href="https://youtu.be/gaT4IAy63MY?si=yloxrGbrSBzDrhH7" target="_blank" rel="noopener" class="project-card project-card--featured reveal">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/gaT4IAy63MY/hqdefault.jpg" alt="Azaadi ki Udaan Main Video" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/gaT4IAy63MY/hqdefault.jpg" alt="Azaadi ki Udaan Main Video" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay">
               <div class="project-card__play">▶</div>
             </div>
@@ -1349,7 +1460,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <!-- Featured 2 -->
         <a href="https://youtu.be/RmRYXgymKUU?si=0NOBVOuvv_lRJ29B" target="_blank" rel="noopener" class="project-card project-card--featured reveal">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/RmRYXgymKUU/hqdefault.jpg" alt="1 Lakh Celebration" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/RmRYXgymKUU/hqdefault.jpg" alt="1 Lakh Celebration" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay">
               <div class="project-card__play">▶</div>
             </div>
@@ -1365,7 +1476,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <!-- Featured 3 -->
         <a href="https://youtu.be/g6do03aM0AA?si=zfGE5sftege7L89Q" target="_blank" rel="noopener" class="project-card project-card--featured reveal">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/g6do03aM0AA/hqdefault.jpg" alt="Arc Reactor Tech Video" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/g6do03aM0AA/hqdefault.jpg" alt="Arc Reactor Tech Video" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay">
               <div class="project-card__play">▶</div>
             </div>
@@ -1381,7 +1492,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <!-- Featured 4 -->
         <a href="https://youtu.be/lCtcGzdLc9g?si=2PywcL3LrEuuB4DB" target="_blank" rel="noopener" class="project-card project-card--featured reveal">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/lCtcGzdLc9g/hqdefault.jpg" alt="Thunder Mode Kahani" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/lCtcGzdLc9g/hqdefault.jpg" alt="Thunder Mode Kahani" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay">
               <div class="project-card__play">▶</div>
             </div>
@@ -1394,6 +1505,72 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
           </div>
         </a>
 
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       VIRAL HITS
+  ════════════════════════════════════════════ -->
+  <section class="viral" id="viral">
+    <div class="container">
+      <div class="viral__head">
+        <h2 class="viral__title">Went<br/>viral.</h2>
+        <p class="viral__intro">Three shorts that travelled far beyond Euler's own followers, ranked by views.<span class="viral__total">14.6M+ views combined</span></p>
+      </div>
+      <div class="viral__list">
+        <a href="https://youtube.com/shorts/bDekkunLnRA" target="_blank" rel="noopener" class="viral-row">
+          <span class="viral-row__rank">1</span>
+          <div class="viral-row__phone"><img src="https://i.ytimg.com/vi/bDekkunLnRA/hqdefault.jpg" alt="Kundan Kumar ke business mein Euler Turbo EV 1000 bana bharosemand saathi" loading="lazy" referrerpolicy="no-referrer" /></div>
+          <div class="viral-row__views">8.2M<small>views</small></div>
+          <div class="viral-row__meta">
+            <h3>Kundan Kumar ke business mein Euler Turbo EV 1000 bana bharosemand saathi</h3>
+            <p>A customer testimonial built around one owner's real business story — the Turbo EV 1000 as the partner he relies on every day.</p>
+            <span class="viral-row__role">Directed &amp; scripted</span><span class="viral-row__watch">Watch on YouTube</span>
+          </div>
+        </a>
+        <a href="https://youtube.com/shorts/VEC8whOwk8U" target="_blank" rel="noopener" class="viral-row">
+          <span class="viral-row__rank">2</span>
+          <div class="viral-row__phone"><img src="https://i.ytimg.com/vi/VEC8whOwk8U/hqdefault.jpg" alt="Euler CHAMPIONS: भरोसा, मेहनत और सफलता का सफर!" loading="lazy" referrerpolicy="no-referrer" /></div>
+          <div class="viral-row__views">6.4M<small>views</small></div>
+          <div class="viral-row__meta">
+            <h3>Euler CHAMPIONS: भरोसा, मेहनत और सफलता का सफर!</h3>
+            <p>Celebrating Euler owners who crossed 1 lakh kilometres — a tribute to trust, hard work and everyday success.</p>
+            <span class="viral-row__role">1 lakh km celebration</span><span class="viral-row__watch">Watch on YouTube</span>
+          </div>
+        </a>
+        <a href="https://youtube.com/shorts/jgGFuG-Ndv0" target="_blank" rel="noopener" class="viral-row">
+          <span class="viral-row__rank">3</span>
+          <div class="viral-row__phone"><img src="https://i.ytimg.com/vi/jgGFuG-Ndv0/hqdefault.jpg" alt="₹1/km Running Cost se Har Kilometre Mein Zyada Bachat | Euler Turbo EV 1000" loading="lazy" referrerpolicy="no-referrer" /></div>
+          <div class="viral-row__views">44K<small>organic YouTube views</small></div>
+          <div class="viral-row__meta">
+            <h3>₹1/km Running Cost se Har Kilometre Mein Zyada Bachat | Euler Turbo EV 1000</h3>
+            <p>An ASMR concept video that makes the ₹1/km running cost something you hear and feel, not just read — with zero paid push.</p>
+            <span class="viral-row__role">Directed &amp; acted</span><span class="viral-row__watch">Watch on YouTube</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       RECOGNITION
+  ════════════════════════════════════════════ -->
+  <section class="recog section" id="recognition">
+    <div class="container">
+      <div class="recog__card reveal">
+        <div>
+          <p class="section__label">Recognition</p>
+          <h2>Featured by Meta as a WhatsApp Business case study</h2>
+          <p>I led Euler's Click-to-WhatsApp (CTWA) campaigns end to end — funnel planning, bot journeys, agency coordination and optimisation. The results were strong enough for Meta to feature the campaign as a WhatsApp Business case study.</p>
+          <a href="https://drive.google.com/file/d/1rMhCzNmPvqCKPNqYPPpAvIo-za00r8b3/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn--primary">View the Meta recognition</a>
+        </div>
+        <div class="recog__figures">
+          <div class="recog__fig"><strong>57</strong><span>vehicle sales generated</span></div>
+          <div class="recog__fig"><strong>~₹1.5L</strong><span>campaign spend</span></div>
+          <div class="recog__fig recog__fig--wide"><strong>CTWA</strong><span>Click-to-WhatsApp funnel with chatbot journeys</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1418,9 +1595,35 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
       <div class="projects__grid" id="projectsGrid">
 
         <!-- SHORT FORM VIDEOS -->
+
+        <a href="https://youtube.com/shorts/QTmOYdHq5QU" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts acting">
+          <div class="project-card__thumb">
+            <img src="https://i.ytimg.com/vi/QTmOYdHq5QU/hqdefault.jpg" alt="Engineer's Day" loading="lazy" referrerpolicy="no-referrer" />
+            <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
+            <span class="project-card__badge">New</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__cat">Hosting · Scripting</span>
+            <h3>Engineer's Day — Problem Dikhi, Solution Socha</h3>
+            <p>An Engineer's Day short on the problem-solving mindset behind Euler's vehicles. Scripted and hosted on camera.</p>
+          </div>
+        </a>
+
+        <a href="https://youtube.com/shorts/CqA9FUKICz0" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
+          <div class="project-card__thumb">
+            <img src="https://i.ytimg.com/vi/CqA9FUKICz0/hqdefault.jpg" alt="EV Ki Pathshala Thunder Mode" loading="lazy" referrerpolicy="no-referrer" />
+            <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
+            <span class="project-card__badge">New</span>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__cat">Scripting · Shoot · EV Ki Pathshala</span>
+            <h3>Thunder Mode Se Range Kyun Kam Hoti Hai? ⚡</h3>
+            <p>An EV Ki Pathshala explainer answering a question drivers actually ask — why range drops in Thunder Mode.</p>
+          </div>
+        </a>
         <a href="https://youtube.com/shorts/zJ27YU2J4YA" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts acting">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/zJ27YU2J4YA/hqdefault.jpg" alt="Diwali 2024" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/zJ27YU2J4YA/hqdefault.jpg" alt="Diwali 2024" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1432,7 +1635,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtube.com/shorts/aMJUKK6QpHw" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/aMJUKK6QpHw/hqdefault.jpg" alt="Overnight Charging" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/aMJUKK6QpHw/hqdefault.jpg" alt="Overnight Charging" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1444,7 +1647,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtube.com/shorts/AdyxxPx30yo" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/AdyxxPx30yo/hqdefault.jpg" alt="Fast Charging Myth" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/AdyxxPx30yo/hqdefault.jpg" alt="Fast Charging Myth" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1456,7 +1659,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtube.com/shorts/HmZ-rreL5uw" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/HmZ-rreL5uw/hqdefault.jpg" alt="Types of Charging" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/HmZ-rreL5uw/hqdefault.jpg" alt="Types of Charging" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1468,7 +1671,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtube.com/shorts/6xhShn5ioE8" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts acting">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/6xhShn5ioE8/hqdefault.jpg" alt="Holi 2025" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/6xhShn5ioE8/hqdefault.jpg" alt="Holi 2025" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1480,7 +1683,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtube.com/shorts/MdP639EOSkI" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/MdP639EOSkI/hqdefault.jpg" alt="Monsoon Safety Tips" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/MdP639EOSkI/hqdefault.jpg" alt="Monsoon Safety Tips" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1493,7 +1696,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <!-- 1 LAKH SHORTS -->
         <a href="https://youtube.com/shorts/Pd9B7eeeQq8" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/Pd9B7eeeQq8/hqdefault.jpg" alt="1 Lakh KM Short 1" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/Pd9B7eeeQq8/hqdefault.jpg" alt="1 Lakh KM Short 1" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1503,21 +1706,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
           </div>
         </a>
 
-        <a href="https://youtube.com/shorts/VEC8whOwk8U" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
-          <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/VEC8whOwk8U/hqdefault.jpg" alt="1 Lakh KM Short 2" loading="lazy" />
-            <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
-          </div>
-          <div class="project-card__body">
-            <span class="project-card__cat">Brand Short · Milestone</span>
-            <h3>Euler CHAMPIONS — Bharosa, Mehnat, Safalta</h3>
-            <p>A second short in the 1 Lakh series — highlighting the perseverance of real EV owners who made history.</p>
-          </div>
-        </a>
-
         <a href="https://youtube.com/shorts/YWXCdmPeuqY" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/YWXCdmPeuqY/hqdefault.jpg" alt="1 Lakh KM Short 3" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/YWXCdmPeuqY/hqdefault.jpg" alt="1 Lakh KM Short 3" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1529,7 +1720,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtube.com/shorts/zrZgxj2wz6k" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts acting">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/zrZgxj2wz6k/hqdefault.jpg" alt="Diwali 2025" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/zrZgxj2wz6k/hqdefault.jpg" alt="Diwali 2025" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1541,7 +1732,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtube.com/shorts/tbpPhhGAPKU" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/tbpPhhGAPKU/hqdefault.jpg" alt="Thunder Mode EP 02" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/tbpPhhGAPKU/hqdefault.jpg" alt="Thunder Mode EP 02" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1553,7 +1744,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtube.com/shorts/vNfYc6QusSk" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/vNfYc6QusSk/hqdefault.jpg" alt="Voxpop" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/vNfYc6QusSk/hqdefault.jpg" alt="Voxpop" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1565,7 +1756,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtube.com/shorts/3gWWjoKq5kY" target="_blank" rel="noopener" class="project-card reveal" data-cat="shorts">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/3gWWjoKq5kY/hqdefault.jpg" alt="Types of Charging 2" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/3gWWjoKq5kY/hqdefault.jpg" alt="Types of Charging 2" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1578,7 +1769,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <!-- LONG FORM -->
         <a href="https://youtu.be/9R3VmGFeiF8" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform testimonial">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/9R3VmGFeiF8/hqdefault.jpg" alt="Testimonial" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/9R3VmGFeiF8/hqdefault.jpg" alt="Testimonial" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1590,7 +1781,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtu.be/NdLXoqDLvBY" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/NdLXoqDLvBY/hqdefault.jpg" alt="Azaadi ki Udaan EP1" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/NdLXoqDLvBY/hqdefault.jpg" alt="Azaadi ki Udaan EP1" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1602,7 +1793,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtu.be/Rw8dJ4I1u50" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/Rw8dJ4I1u50/hqdefault.jpg" alt="Azaadi ki Udaan EP2" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/Rw8dJ4I1u50/hqdefault.jpg" alt="Azaadi ki Udaan EP2" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1614,7 +1805,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtu.be/cS4f-w9bipw" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform testimonial">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/cS4f-w9bipw/hqdefault.jpg" alt="Anand Testimonial" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/cS4f-w9bipw/hqdefault.jpg" alt="Anand Testimonial" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1626,7 +1817,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtu.be/9HPQv8-olSo" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform testimonial">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/9HPQv8-olSo/hqdefault.jpg" alt="Raju Testimonial" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/9HPQv8-olSo/hqdefault.jpg" alt="Raju Testimonial" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1638,7 +1829,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtu.be/2XaP9rFrNAA" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/2XaP9rFrNAA/hqdefault.jpg" alt="Ujjain Mela" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/2XaP9rFrNAA/hqdefault.jpg" alt="Ujjain Mela" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1650,7 +1841,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtu.be/ul3U-Lmy7BA" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform testimonial">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/ul3U-Lmy7BA/hqdefault.jpg" alt="Arijesh Testimonial" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/ul3U-Lmy7BA/hqdefault.jpg" alt="Arijesh Testimonial" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1662,7 +1853,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtu.be/SctTRUMyCeA" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform testimonial">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/SctTRUMyCeA/hqdefault.jpg" alt="Shamsher Testimonial" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/SctTRUMyCeA/hqdefault.jpg" alt="Shamsher Testimonial" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1674,7 +1865,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtu.be/l7I3IDzBXKE" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/l7I3IDzBXKE/hqdefault.jpg" alt="Direction Scripting" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/l7I3IDzBXKE/hqdefault.jpg" alt="Direction Scripting" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1686,7 +1877,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
         <a href="https://youtu.be/19sAEXkbJLM" target="_blank" rel="noopener" class="project-card reveal" data-cat="longform testimonial">
           <div class="project-card__thumb">
-            <img src="https://img.youtube.com/vi/19sAEXkbJLM/hqdefault.jpg" alt="Two Brothers" loading="lazy" />
+            <img src="https://i.ytimg.com/vi/19sAEXkbJLM/hqdefault.jpg" alt="Two Brothers" loading="lazy" referrerpolicy="no-referrer" />
             <div class="project-card__overlay"><div class="project-card__play">▶</div></div>
           </div>
           <div class="project-card__body">
@@ -1713,35 +1904,35 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <div class="skill-card reveal">
           <div class="skill-card__icon">🎬</div>
           <h3>Content Creation</h3>
-          <p>End-to-end video production — scripting, hosting, cinematography, and direction. From short-form reels to full brand films.</p>
+          <p>6+ product films and 70+ customer films — scripting, hosting, cinematography and direction, from shorts to full brand films.</p>
           <div class="skill-card__bar"><div class="skill-card__fill" data-width="95"></div></div>
         </div>
 
         <div class="skill-card reveal">
           <div class="skill-card__icon">🤝</div>
           <h3>Influencer Marketing</h3>
-          <p>Multi-region influencer strategy across Hindi, Marathi, and Tamil markets. Mega, macro, and micro tier execution.</p>
+          <p>100+ influencers across PAN-India campaigns — identification, briefing, negotiation, approvals and tracking through a self-built performance dashboard. 50M+ reach from SEO-led creator campaigns.</p>
           <div class="skill-card__bar"><div class="skill-card__fill" data-width="90"></div></div>
         </div>
 
         <div class="skill-card reveal">
           <div class="skill-card__icon">📱</div>
           <h3>Social Media Strategy</h3>
-          <p>Platform-native content planning, UTM tracking, paid amplification, and performance-driven campaign architecture.</p>
+          <p>Content strategy across Meta, LinkedIn and YouTube — 630% growth in NEO social reach and 200% growth across Euler's accounts.</p>
           <div class="skill-card__bar"><div class="skill-card__fill" data-width="88"></div></div>
         </div>
 
         <div class="skill-card reveal">
           <div class="skill-card__icon">💬</div>
-          <h3>WhatsApp & RCS Marketing</h3>
-          <p>Funnel-based WhatsApp campaign design with AI chatbot integration and lead nurturing flows for commercial EV segments.</p>
+          <h3>WhatsApp Marketing</h3>
+          <p>End-to-end Click-to-WhatsApp funnels with bot journeys — 57 vehicle sales from ~₹1.5 lakh, featured by Meta as a case study.</p>
           <div class="skill-card__bar"><div class="skill-card__fill" data-width="80"></div></div>
         </div>
 
         <div class="skill-card reveal">
-          <div class="skill-card__icon">🛡️</div>
-          <h3>ORM & Brand Voice</h3>
-          <p>Online Reputation Management across social platforms — monitoring brand sentiment and crafting measured, on-brand responses.</p>
+          <div class="skill-card__icon">🚀</div>
+          <h3>Product Launches &amp; GTM</h3>
+          <p>Led 2 launches and contributed to 3 — NEO, Turbo EV 1000 and Storm — across positioning, launch narratives, ATL/BTL, radio, events and dealer communication.</p>
           <div class="skill-card__bar"><div class="skill-card__fill" data-width="82"></div></div>
         </div>
 
@@ -1774,22 +1965,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
                 <h3>Marketing Executive</h3>
                 <p class="timeline__company">Euler Motors · New Delhi</p>
               </div>
-              <span class="timeline__date">2024 – Present</span>
+              <span class="timeline__date">Sep 2024 – Present</span>
             </div>
             <ul class="timeline__list">
-              <li>Leading social media & influencer marketing strategy across 7 geographic regions of India</li>
-              <li>Executing multi-language influencer campaigns (Hindi, Marathi, Tamil, Malayalam) with Mega to Nano tier creators</li>
-              <li>Scripting, hosting, and directing brand content — testimonials, tech explainers, festive films, and episodic series</li>
-              <li>Building FY26 social media strategy with paid amplification, UTM tracking, and competitive benchmarking</li>
-              <li>Developing influencer performance monitoring dashboards with weighted scoring logic</li>
-              <li>Running 'EV Ki Pathshala' — an Instagram education series for commercial EV audiences</li>
+              <li>Led end-to-end Click-to-WhatsApp campaigns — 57 vehicle sales from ~₹1.5 lakh spend, later featured by Meta as a WhatsApp Business case study</li>
+              <li>Managed 100+ influencers across PAN-India campaigns and built a self-developed influencer performance dashboard for reporting</li>
+              <li>SEO-led creator campaigns generating 50M+ reach; led the World Cup 2026 Influencer Campaign and the ₹1 per Km Campaign (20M+ views)</li>
+              <li>Drove 630% growth in NEO social reach and 200% growth across Euler's social accounts on Meta, LinkedIn and YouTube</li>
+              <li>Led 2 and contributed to 3 product launches — NEO, Turbo EV 1000 and Storm — directing ₹50–80 lakh marketing budgets</li>
+              <li>Ground-level market research and city-wise communication planning across North and South markets</li>
+              <li>Worked with CXOs on launches and events; produced testimonial films and sales enablement content; contributed to AI-led marketing workflows and chatbot initiatives</li>
             </ul>
             <div class="timeline__tags">
-              <span>Influencer Strategy</span>
-              <span>Content Production</span>
-              <span>EV Marketing</span>
-              <span>WhatsApp Funnels</span>
+              <span>Product Launches</span>
+              <span>Influencer Marketing</span>
+              <span>WhatsApp Marketing</span>
+              <span>Brand Strategy</span>
             </div>
+          </div>
           </div>
         </div>
 
@@ -1799,15 +1992,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
             <div class="timeline__header">
               <div>
                 <h3>Public Relations Head</h3>
-                <p class="timeline__company">ISTE · Gwalior</p>
+                <p class="timeline__company">Indian Society for Technical Education, MITS · Gwalior</p>
               </div>
-              <span class="timeline__date">2020 – 2024</span>
+              <span class="timeline__date">Feb 2022 – Jun 2024</span>
             </div>
             <ul class="timeline__list">
-              <li>Led institutional PR and communications for a national-level engineering society chapter</li>
-              <li>Managed event marketing, influencer outreach, and stakeholder communications</li>
-              <li>Organized and executed large-scale events with 500+ attendees, from concept to coverage</li>
-              <li>Built partnerships with industry leaders and market experts for knowledge-sharing initiatives</li>
+              <li>Led PR, sponsorship coordination and communications for 35+ events, managing budgets and external stakeholders</li>
+              <li>Coordinated with 20+ sponsors and brands, overseeing ₹8 lakh+ in sponsorships</li>
+              <li>Led event communication and outreach across 5,000+ students</li>
+              <li>Represented the organisation in industry-facing events and external communications</li>
             </ul>
             <div class="timeline__tags">
               <span>Public Relations</span>
@@ -1823,22 +2016,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
           <div class="timeline__card">
             <div class="timeline__header">
               <div>
-                <h3>Theatre &amp; Drama — Performer</h3>
-                <p class="timeline__company">Stage Productions &amp; Cultural Events · Gwalior</p>
+                <h3>Managing Director</h3>
+                <p class="timeline__company">RASHTRAAY (Street Theatre), MITS · Gwalior</p>
               </div>
-              <span class="timeline__date">2022 – 2024</span>
+              <span class="timeline__date">Jan 2021 – Jun 2024</span>
             </div>
             <ul class="timeline__list">
-              <li>2+ years of active theatre and drama performance in college and city-level productions</li>
-              <li>Developed stage presence, voice modulation, and real-time emotional delivery — skills that directly power on-screen hosting and brand acting roles</li>
-              <li>Performed in Hindi plays, mono-act competitions, and cultural fests — winning recognition for character depth and audience connect</li>
-              <li>Theatre foundation shapes every script, every frame, and every on-camera moment in professional work today</li>
+              <li>Led a 40+ member street-play team — acting, scripting and directing across competitions and live performances</li>
+              <li>1st position, National Level Street Play Competition at AMICHROMA'23 &amp; '24, Amity University Gwalior</li>
+              <li>2nd position, National Level Street Play Competition at Maffick'24 and TARANG'23, MANIT Bhopal</li>
+              <li>The stage presence and voice work from these years power my on-camera hosting today</li>
             </ul>
             <div class="timeline__tags">
               <span>Stage Performance</span>
               <span>Voice Modulation</span>
               <span>Character Acting</span>
-              <span>Mono-Act</span>
+              <span>Direction</span>
             </div>
           </div>
         </div>
@@ -1919,7 +2112,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="container">
       <div class="footer__inner">
         <div class="footer__logo">RSR<span class="dot">.</span></div>
-        <p class="footer__copy">© 2025 Rohan Singh Rajput. Crafted with purpose.</p>
+        <p class="footer__copy">© 2026 Rohan Singh Rajput. Crafted with purpose.</p>
         <div class="footer__scroll-top">
           <a href="#hero" class="scroll-top" aria-label="Back to top">↑</a>
         </div>
@@ -2184,28 +2377,37 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    9. IMAGE LAZY LOAD FALLBACK
 ──────────────────────────────────────────── */
 (function initImageFallback() {
-  const imgs = document.querySelectorAll('img[loading="lazy"]');
+  // Try several YouTube thumbnail hosts/sizes before giving up
+  const variants = id => [
+    `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+    `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/mqdefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/oardefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/0.jpg`
+  ];
+  const imgs = document.querySelectorAll('img[src*="ytimg.com/vi/"], img[src*="youtube.com/vi/"]');
 
   imgs.forEach(img => {
-    img.addEventListener('error', () => {
-      // Show a styled placeholder if YouTube thumb fails to load
+    const m = img.src.match(/\/vi\/([^/]+)\//);
+    if (!m) return;
+    const list = variants(m[1]);
+    let i = 0;
+    const next = () => {
+      i++;
+      if (i < list.length) { img.src = list[i]; return; }
+      // All sources failed: show a titled placeholder instead of a blank box
       img.style.display = 'none';
-      const placeholder = document.createElement('div');
-      placeholder.style.cssText = `
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, #080f1a, #0d1a28);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.5rem;
-      `;
-      placeholder.textContent = '▶';
+      const ph = document.createElement('div');
+      ph.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0b2a33,#050a12);color:#00e1ad;font-size:2.5rem;';
+      ph.textContent = '▶';
       img.parentElement.style.position = 'relative';
-      img.parentElement.appendChild(placeholder);
-    });
+      img.parentElement.appendChild(ph);
+    };
+    img.addEventListener('error', next);
+    // YouTube returns a 120×90 grey image instead of an error for missing sizes
+    img.addEventListener('load', () => { if (img.naturalWidth && img.naturalWidth <= 120) next(); });
+    img.referrerPolicy = 'no-referrer';
+    if (img.complete && img.naturalWidth === 0) next();
   });
 })();
 
