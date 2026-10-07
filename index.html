@@ -1310,6 +1310,26 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .viral-row__phone { transition: none; }
 }
 
+/* ── FREELANCE (other brands) ─────────────── */
+.freelance__intro { color: var(--text-muted); max-width: 56ch; margin: -24px 0 48px; }
+.freelance__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.fl-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.fl-card__media { position: relative; height: 560px; background: #fff; overflow: hidden; }
+.fl-card__media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.fl-card__body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.fl-card__cat { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--primary); }
+.fl-card__body h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--white); line-height: 1.3; }
+.fl-card__body p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.55; }
+.fl-card__stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 6px; }
+.fl-card__stats span { font-size: 0.8rem; padding: 5px 11px; border-radius: 100px; border: 1px solid var(--border); color: var(--text); background: rgba(255,255,255,0.03); }
+.fl-card__stats span strong { color: var(--primary); font-weight: 600; }
+.fl-card__link { font-size: 0.85rem; font-weight: 600; color: var(--secondary); text-decoration: underline; text-underline-offset: 3px; }
+.viral-row__phone--ig { background: #fff; }
+.viral-row__phone--ig iframe { position: absolute; top: -22px; left: 0; width: 326px; height: 760px; border: 0; transform: scale(0.381); transform-origin: top left; pointer-events: none; }
+@media (max-width: 1024px) { .freelance__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 680px)  { .freelance__grid { grid-template-columns: 1fr; } .fl-card__media { height: 600px; } }
+@media (max-width: 900px)  { .viral-row__phone--ig iframe { transform: scale(0.27); } }
+
 </style>
 </head>
 <body>
@@ -1322,6 +1342,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <ul class="nav__links">
       <li><a href="#about">About</a></li>
       <li><a href="#featured">Work</a></li>
+      <li><a href="#freelance">Freelance</a></li>
       <li><a href="#viral">Viral</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -1337,6 +1358,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <ul>
       <li><a href="#about" class="mob-link">About</a></li>
       <li><a href="#featured" class="mob-link">Work</a></li>
+      <li><a href="#freelance" class="mob-link">Freelance</a></li>
       <li><a href="#viral" class="mob-link">Viral</a></li>
       <li><a href="#skills" class="mob-link">Skills</a></li>
       <li><a href="#experience" class="mob-link">Experience</a></li>
@@ -1434,6 +1456,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   <!-- ═══════════════════════════════════════════
        FEATURED PROJECTS
   ════════════════════════════════════════════ -->
+
   <section class="featured section" id="featured">
     <div class="container">
       <p class="section__label reveal">Featured Work</p>
@@ -1511,13 +1534,62 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 
   <!-- ═══════════════════════════════════════════
+       FREELANCE — OTHER BRANDS
+  ════════════════════════════════════════════ -->
+  <section class="freelance section" id="freelance">
+    <div class="container">
+      <p class="section__label reveal">Freelance</p>
+      <h2 class="section__title reveal">Work for<br/><span class="grad-text">Other Brands</span></h2>
+      <p class="freelance__intro reveal">Instagram reels I've worked on outside Euler, across voiceover, scripting and content.</p>
+      <div class="freelance__grid">
+        <article class="fl-card reveal">
+          <div class="fl-card__media">
+            <iframe src="https://www.instagram.com/reel/DZwsR1fJEoh/embed/" title="Father's Day Reel" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; picture-in-picture"></iframe>
+          </div>
+          <div class="fl-card__body">
+            <span class="fl-card__cat">Voiceover · Scripting</span>
+            <h3>Father's Day Reel</h3>
+            <p>A Father's Day story told through voiceover, written and voiced end to end.</p>
+            <div class="fl-card__stats"><span><strong>1M+</strong> views</span><span><strong>1.27L</strong> likes</span><span><strong>41</strong> shares</span><span><strong>18</strong> comments</span></div>
+            <a class="fl-card__link" href="https://www.instagram.com/reel/DZwsR1fJEoh/" target="_blank" rel="noopener">Open on Instagram</a>
+          </div>
+        </article>
+        <article class="fl-card reveal">
+          <div class="fl-card__media">
+            <iframe src="https://www.instagram.com/reel/DV72bxlEgYx/embed/" title="War Impact on the Tile Industry" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; picture-in-picture"></iframe>
+          </div>
+          <div class="fl-card__body">
+            <span class="fl-card__cat">Tile Industry</span>
+            <h3>War Impact on the Tile Industry</h3>
+            <p>A news-style reel breaking down how the war is affecting the tile industry.</p>
+            <div class="fl-card__stats"><span><strong>688K</strong> views</span><span><strong>56.3K</strong> likes</span><span><strong>67</strong> shares</span><span><strong>13</strong> comments</span></div>
+            <a class="fl-card__link" href="https://www.instagram.com/reel/DV72bxlEgYx/" target="_blank" rel="noopener">Open on Instagram</a>
+          </div>
+        </article>
+        <article class="fl-card reveal">
+          <div class="fl-card__media">
+            <iframe src="https://www.instagram.com/reel/DY4JK0KhJ1W/embed/" title="Cool Tiles — Homes Up to 8°C Cooler" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; picture-in-picture"></iframe>
+          </div>
+          <div class="fl-card__body">
+            <span class="fl-card__cat">Orientbell Tiles</span>
+            <h3>Cool Tiles — Homes Up to 8°C Cooler</h3>
+            <p>Normal tiles trap heat and make homes hotter. Cool Tiles (SRI 98) keep surfaces up to 8°C cooler.</p>
+            <div class="fl-card__stats"><span><strong>9,634</strong> likes</span><span><strong>21</strong> shares</span><span><strong>5</strong> comments</span></div>
+            <a class="fl-card__link" href="https://www.instagram.com/reel/DY4JK0KhJ1W/" target="_blank" rel="noopener">Open on Instagram</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        VIRAL HITS
   ════════════════════════════════════════════ -->
   <section class="viral" id="viral">
     <div class="container">
       <div class="viral__head">
         <h2 class="viral__title">Went<br/>viral.</h2>
-        <p class="viral__intro">Three shorts that travelled far beyond Euler's own followers, ranked by views.<span class="viral__total">14.6M+ views combined</span></p>
+        <p class="viral__intro">Four videos that travelled far beyond the brands' own followers, ranked by views.<span class="viral__total">15.6M+ views combined</span></p>
       </div>
       <div class="viral__list">
         <a href="https://youtube.com/shorts/bDekkunLnRA" target="_blank" rel="noopener" class="viral-row">
@@ -1540,8 +1612,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
             <span class="viral-row__role">1 lakh km celebration</span><span class="viral-row__watch">Watch on YouTube</span>
           </div>
         </a>
-        <a href="https://youtube.com/shorts/jgGFuG-Ndv0" target="_blank" rel="noopener" class="viral-row">
+        <a href="https://www.instagram.com/reel/DZwsR1fJEoh/" target="_blank" rel="noopener" class="viral-row">
           <span class="viral-row__rank">3</span>
+          <div class="viral-row__phone viral-row__phone--ig"><iframe src="https://www.instagram.com/reel/DZwsR1fJEoh/embed/" title="Father's Day Reel" loading="lazy" scrolling="no" tabindex="-1"></iframe></div>
+          <div class="viral-row__views">1M+<small>views · 1.27L likes</small></div>
+          <div class="viral-row__meta">
+            <h3>Father's Day Reel</h3>
+            <p>A Father's Day story for another brand, carried by voiceover — 41 shares and 18 comments on top of 1.27 lakh likes.</p>
+            <span class="viral-row__role">Voiceover &amp; scripting</span><span class="viral-row__watch">Watch on Instagram</span>
+          </div>
+        </a>
+        <a href="https://youtube.com/shorts/jgGFuG-Ndv0" target="_blank" rel="noopener" class="viral-row">
+          <span class="viral-row__rank">4</span>
           <div class="viral-row__phone"><img src="https://i.ytimg.com/vi/jgGFuG-Ndv0/hqdefault.jpg" alt="₹1/km Running Cost se Har Kilometre Mein Zyada Bachat | Euler Turbo EV 1000" loading="lazy" referrerpolicy="no-referrer" /></div>
           <div class="viral-row__views">44K<small>organic YouTube views</small></div>
           <div class="viral-row__meta">
